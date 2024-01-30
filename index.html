@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/modal_modifyClient.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./js/modalAdd.js" defer></script>
+    <script type="module" src="./js/ClientsRender.js" defer></script>
+    <script type="module" src="./js/sort.js" defer></script>
+    <title>Система управления данными</title>
+  </head>
+  <body>
+    <header>
+      <div class="header_wrap">
+        <img href="#" class="logo" src="./img/logo.svg" alt="logo" />
+        <input
+          class="input head-input"
+          type="text"
+          placeholder="Введите запрос"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="main_wrap">
+        <div class="main_title">
+          <h1 class="title-text">Клиенты</h1>
+        </div>
+        <div class="table_wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="fRow arrow" id="id">
+                  ID <img class="table_icons" src="./img/arrow_up.svg" alt="" />
+                </th>
+                <th class="gText arrow" id="fio">
+                  Фамилия Имя Отчество
+                  <img class="table_icons" src="/img/arrow_down.svg" alt="" /><img
+                    class="table_icons"
+                    src="/img/a-ya.svg"
+                    alt=""
+                  />
+                </th class="gText">
+                <th class="gText createD arrow"  id="date">
+                  Дата и время создания
+                  <img class="table_icons" src="/img/arrow_down.svg " alt="" />
+                </th">
+                <th class="gText createD arrow" id="dateLast">
+                  Последние изменения
+                  <img class="table_icons" src="/img/arrow_down.svg" alt="" />
+                </th>
+                <th class="gText cont">Контакты</th>
+                <th class="gText">Действия</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="id">123455</td>
+                <td class="fio">Скворцов Денис Юрьевич</td>
+                <td class="data">
+                  <div class="date">
+                    <p class="sData">21.02.2021</p>
+                    <p class="gText">12:41</p>
+                  </div>
+                </td>
+                <td class="lastEdit">
+                  <div class="date">
+                    <p class="sData">21.02.2021</p>
+                    <p class="gText">12:50</p>
+                  </div>
+                </td>
+                <td class="contacts">
+                    <img class="icon_contact vk" src="./img/vk.svg" alt="">
+                    <img class="icon_contact fb" src="./img/Facebook.svg" alt="">
+                    <img class="icon_contact phone" src="./img/Телефон.svg" alt="">
+                    <img class="icon_contact mail" src="./img/Email.svg" alt="">
+                    <img class="icon_contact people" src="./img/Доп.Телефон.svg" alt="">
+                    <img class="icon_contact" src="./img/Доп.Телефон.svg" alt="">
+                    <img class="icon_contact" src="./img/Доп.Телефон.svg" alt="">
+                    <img class="icon_contact" src="./img/Доп.Телефон.svg" alt="">
+                    <img class="icon_contact" src="./img/Доп.Телефон.svg" alt="">
+                    <img class="icon_contact" src="./img/Доп.Телефон.svg" alt="">
+                </td>
+                <td class="applications">
+                  <div class="buttons_app">
+                    <div class="edit"><img class="btn_t" src="./img/edit.svg" alt=""><p>Изменить</p></div>
+                    <div class="delete"><img class="btn_t" src="./img/cancel.svg" alt=""><p>Удалить</p></div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button_wrap">
+            <button class="add"><img class="pad" src="./img/add.svg" alt="add"> Добавить клиента</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal_addClient">
+      <div class="modal_addClient_wrap">
+        <div class="modal_add">
+          <div class="close_btn">
+            <img class="close" src="./img/close.svg" alt="">
+          </div>
+          <div class="modal_add_title">
+            <h1>Новый клиент</h1>
+          </div>
+          <div class="contact_info">
+            <p class="requireSurname">Заполните Фамилию</p>
+            <input class="modal_input surname" type="text" placeholder="Фамилия">
+            <p class="requireName">Заполните Имя</p>
+            <input class="modal_input name" type="text" placeholder="Имя">
+            <input class="modal_input patronymic" type="text" placeholder="Отчество">
+          </div>
+          <div class="div_grid"></div>
+          <div class="dop_info">
+            <img class="plus plusBtn" src="./img/plus.svg" alt="plus">
+          <h2>Добавить контакт</h2>
+          </div>
+          <div class="btnSave">
+            <button type="submit" class="saveBtn">Сохранить</button>
+          </div>
+          <div class="cancel">
+            <a>Отмена</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal_modifyClient">
+            <div class="modal_modifyClient_wrap">
+        <div class="modal_modify">
+          <div class="close_btn">
+            <img class="close" src="./img/close.svg" alt="">
+          </div>
+          <div class="modal_modify_title">
+            <h1>Изменить данные</h1>
+            <p class="idModal">ID:</p>
+          </div>
+          <div class="contact_info">
+            <p class="requireSurname">Заполните Фамилию</p>
+            <input class="modal_input surname" type="text" placeholder="Фамилия">
+            <p class="requireName">Заполните Имя</p>
+            <input class="modal_input name" type="text" placeholder="Имя">
+            <input class="modal_input patronymic" type="text" placeholder="Отчество">
+          </div>
+          <div class="div_grid"></div>
+          <div class="dop_info">
+            <img class="plus plusBtn" src="./img/plus.svg" alt="plus">
+          <h2>Добавить контакт</h2>
+          </div>
+          <div class="btnSaveModify">
+            <button type="submit" class="saveBtn">Сохранить</button>
+          </div>
+          <div class="cancel">
+            <a>Отмена</a>
+          </div>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>
